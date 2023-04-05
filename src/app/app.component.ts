@@ -1,7 +1,8 @@
 import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { FullCalendarComponent } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid';
-import { Calendar } from '@fullcalendar/core';
+import { CalendarOptions } from '@fullcalendar/core';
+import { INITIAL_EVENTS, createEventId } from 'src/app/event-util';
 
 @Component({
   selector: 'app-root',
@@ -10,15 +11,19 @@ import { Calendar } from '@fullcalendar/core';
 })
 export class AppComponent implements AfterViewInit {
   @ViewChild('calendar') calendarComponent!: FullCalendarComponent;
+  calendarVisible = true;
+  calendarOptions: CalendarOptions = {
+    initialView: 'dayGridMonth',
+    plugins: [dayGridPlugin],
+    eventClick: this.handleEventClick.bind(this),
+    initialEvents: INITIAL_EVENTS,
+  };
 
-  ngAfterViewInit() {
-    let calendarEl: HTMLElement = document.getElementById('calendar')!;
-    let calendar = new Calendar(calendarEl, {
-      plugins: [ dayGridPlugin ]
-      // options here
-    });
-  
-    calendar.render();
 
+  ngAfterViewInit(): void {
+
+  };
+
+  handleEventClick() {
   }
 }
