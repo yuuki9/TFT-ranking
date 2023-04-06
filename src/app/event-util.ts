@@ -6,15 +6,23 @@ const TODAY_STR = new Date().toISOString().replace(/T.*$/, ''); // YYYY-MM-DD of
 export const INITIAL_EVENTS: EventInput[] = [
   {
     id: createEventId(),
-    title: '진호성',
-    start: TODAY_STR
+    title: '죽음을 지배하는 자.. 진호성',
+    start: '2023-04-05',
+    end: TODAY_STR
   },
   {
     id: createEventId(),
-    title: 'Timed event',
-    start: TODAY_STR + 'T00:00:00',
-    end: TODAY_STR + 'T03:00:00'
+    title: '캐리비안의 ☆미스포차☆ 오영진',
+    start: '2023-04-04',
+
+  },
+  {
+    id: createEventId(),
+    title: '"전영후"',
+    start: TODAY_STR,
+
   }
+
 ];
 
 export function createEventId() {
