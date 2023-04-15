@@ -5,6 +5,7 @@ import { CalendarOptions, EventClickArg } from '@fullcalendar/core';
 import { INITIAL_EVENTS, createEventId } from 'src/app/event-util';
 import interactionPlugin from '@fullcalendar/interaction';  
 import timeGridPlugin from '@fullcalendar/timegrid';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,16 +13,26 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 })
 export class AppComponent implements AfterViewInit {
   @ViewChild('calendar') calendarComponent!: FullCalendarComponent;
+  TODAY_STR = new Date().toISOString().replace(/T.*$/, ''); // YYYY-MM-DD of today
+  
+  formData = {
+    name: '',
+    age: null,
+    email: '',
+    message: ''
+  };
   calendarVisible = true;
   calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
     plugins: [dayGridPlugin, interactionPlugin, timeGridPlugin],
     dateClick: (eventInfo) => {
-      // 그리드 날짜 클릭 이벤트 핸들러
-      alert(`${eventInfo.dateStr}`);
-      // 여기에 원하는 이벤트 처리 로직 추가
+      console.log(this.TODAY_STR)
+      console.log(eventInfo.dateStr)
+      if(this.TODAY_STR == eventInfo.dateStr){
+        console.log("check")
+      }
+     
     },
-    initialEvents: INITIAL_EVENTS,
   };
 
 
@@ -29,12 +40,8 @@ export class AppComponent implements AfterViewInit {
 
   };
 
-  handleEventClick(event: EventClickArg) {
-    console.log(event)
-  }
-
-  dateClick(arg: any): void {
-    console.log("chchch")
-    console.log(arg)
+  onFormSubmit() {
+    // 폼 데이터 전송 로직 추가
+    console.log('Form data:', this.formData);
   }
 }

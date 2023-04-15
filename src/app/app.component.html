@@ -1,5 +1,31 @@
 <!-- <div id="calendar">
   <full-calendar #calendar></full-calendar>
 </div> -->
-<full-calendar [options]="calendarOptions"></full-calendar>
+<full-calendar style="background: black; color:#fff;" [options]="calendarOptions"></full-calendar>
+
+<!-- ms-dos-form.component.html -->
+<div class="ms-dos-form">
+  <div class="ms-dos-form-title">MS-DOS Form</div>
+  <form (submit)="onFormSubmit()">
+    <div class="ms-dos-form-group">
+      <label class="ms-dos-form-label">Name:</label>
+      <input class="ms-dos-form-input" type="text" [(ngModel)]="formData.name" name="name" required>
+    </div>
+    <div class="ms-dos-form-group">
+      <label class="ms-dos-form-label">Age:</label>
+      <input class="ms-dos-form-input" type="number" [(ngModel)]="formData.age" name="age" required>
+    </div>
+    <div class="ms-dos-form-group">
+      <label class="ms-dos-form-label">Email:</label>
+      <input class="ms-dos-form-input" type="email" [(ngModel)]="formData.email" name="email" required>
+    </div>
+    <div class="ms-dos-form-group">
+      <label class="ms-dos-form-label">Message:</label>
+      <textarea class="ms-dos-form-textarea" [(ngModel)]="formData.message" name="message" required></textarea>
+    </div>
+    <div class="ms-dos-form-group">
+      <button class="ms-dos-form-button" type="submit">Submit</button>
+    </div>
+  </form>
+</div>
 
