@@ -1,0 +1,50 @@
+/* ms-dos-form.component.css */
+.ms-dos-form {
+    background-color: black;
+    color: green;
+    padding: 16px;
+    font-family: "ModernDos", monospace;
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  .ms-dos-form-title {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .ms-dos-form-group {
+    margin-bottom: 16px;
+  }
+  
+  .ms-dos-form-label {
+    display: inline-block;
+    width: 80px;
+  }
+  
+  .ms-dos-form-input,
+  .ms-dos-form-textarea {
+    background-color: black;
+    color: green;
+    border: none;
+    border-bottom: 1px solid green;
+    width: 100%;
+    padding: 4px;
+  }
+  
+  .ms-dos-form-textarea {
+    height: 80px;
+  }
+  
+  .ms-dos-form-button {
+    background-color: green;
+    color: black;
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-family: "ModernDos", monospace;
+    height: 30px;
+    width: 100px;
+    float: right;
+    font-size: 30px;
+  }

@@ -3,7 +3,7 @@
   background-color: black;
   color: green;
   padding: 16px;
-  font-family: "Courier New", monospace;
+  font-family: "ModernDos", monospace;
   width: 300px;
   margin: 0 auto;
 }
@@ -42,4 +42,9 @@
   border: none;
   padding: 4px 8px;
   cursor: pointer;
+  font-family: "ModernDos", monospace;
+  height: 30px;
+  width: 100px;
+  float: right;
+  font-size: 30px;
 }

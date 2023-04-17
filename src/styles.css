@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face { /* 애플산돌고딕 폰트 적용 */
+    font-family: "ModernDOS";
+    src: url("assets/font/ModernDOS8x8.ttf") format("truetype");
+    font-weight: normal;
+  } /* 이후 "SDGothic"으로 폰트 적용 가능 */

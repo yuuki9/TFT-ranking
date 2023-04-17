@@ -7,15 +7,17 @@ import interactionPlugin from '@fullcalendar/interaction'; // a plugin!
 import { DialogModule } from 'primeng/dialog';
 import { AppComponent } from './app.component';
 import { ButtonModule } from 'primeng/button';
+import { ModalComponent } from './modal/modal.component';
+import { RankingComponent } from './ranking/ranking.component';
 
 @NgModule({
-  imports:[ BrowserModule, 
-    FormsModule, 
-    FullCalendarModule, 
+  imports: [BrowserModule,
+    FormsModule,
+    FullCalendarModule,
     DialogModule,
     ButtonModule
   ],
-  declarations: [ AppComponent ],
-  bootstrap:    [ AppComponent ]
+  declarations: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

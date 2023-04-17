@@ -15,12 +15,6 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('calendar') calendarComponent!: FullCalendarComponent;
   TODAY_STR = new Date().toISOString().replace(/T.*$/, ''); // YYYY-MM-DD of today
   
-  formData = {
-    name: '',
-    age: null,
-    email: '',
-    message: ''
-  };
   calendarVisible = true;
   calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
@@ -39,9 +33,4 @@ export class AppComponent implements AfterViewInit {
   ngAfterViewInit(): void {
 
   };
-
-  onFormSubmit() {
-    // 폼 데이터 전송 로직 추가
-    console.log('Form data:', this.formData);
-  }
 }
