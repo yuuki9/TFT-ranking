@@ -30,10 +30,12 @@
   border-bottom: 1px solid green;
   width: 100%;
   padding: 4px;
+  margin: 5px 0px 0px 0px;
 }
 
 .ms-dos-form-textarea {
   height: 80px;
+  margin: 5px 0px 0px 0px;
 }
 
 .ms-dos-form-button {
@@ -47,4 +49,10 @@
   width: 100px;
   float: right;
   font-size: 30px;
+}
+
+#celendar{
+  width: 1000px;
+  height: 800px;
+  text-align: -webkit-center;
 }

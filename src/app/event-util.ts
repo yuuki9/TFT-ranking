@@ -6,6 +6,12 @@ const TODAY_STR = new Date().toISOString().replace(/T.*$/, ''); // YYYY-MM-DD of
 export const INITIAL_EVENTS: EventInput[] = [
   {
     id: createEventId(),
+    title: '캐리비안의 미스포춘 신태훈',
+    start: '2023-04-03',
+
+  },
+  {
+    id: createEventId(),
     title: '죽음을 지배하는 자.. 진호성',
     start: '2023-04-05',
     end: TODAY_STR
@@ -18,7 +24,7 @@ export const INITIAL_EVENTS: EventInput[] = [
   },
   {
     id: createEventId(),
-    title: '"전영후"',
+    title: '이지스의 저승사자 진호성 - 결투가',
     start: TODAY_STR,
 
   }

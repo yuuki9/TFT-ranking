@@ -30,6 +30,7 @@
     border-bottom: 1px solid green;
     width: 100%;
     padding: 4px;
+    margin-top: 5px;
   }
   
   .ms-dos-form-textarea {
@@ -47,4 +48,28 @@
     width: 100px;
     float: right;
     font-size: 30px;
+  }
+
+  .ms-dos-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 310px;
+    z-index: 999; /* 최상위 레이어로 설정 */
+    }
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* 투명한 검은색 배경색 (0.5의 투명도) */
+    z-index: 5; 
+  }
+  .ms-dos-form-close{
+    cursor: pointer;
   }

@@ -1,1 +1,28 @@
-<p>modal works!</p>
+<!-- ms-dos-form.component.html -->
+<div class="overlay"></div>
+<div class="ms-dos-form">
+  <div class="ms-dos-form-title">Who is The Winner?
+  <span class ="ms-dos-form-close" style = "float: right;" (click)="close()">X</span> 
+  </div>
+  <form>
+    <div class="ms-dos-form-group">
+      <label class="ms-dos-form-label">Date:</label>
+      <input class="ms-dos-form-input" [(ngModel)]="formData.thisday" name="thisday" disabled>
+    </div>
+    <div class="ms-dos-form-group">
+      <label class="ms-dos-form-label">Name:</label>
+      <input class="ms-dos-form-input" type="text" [(ngModel)]="formData.name" name="name" required>
+    </div>
+    <div class="ms-dos-form-group">
+      <label class="ms-dos-form-label">Deck:</label>
+      <input class="ms-dos-form-input" type="text" [(ngModel)]="formData.deck" name="deck" required>
+    </div>
+    <div class="ms-dos-form-group">
+      <label class="ms-dos-form-label">Message:</label>
+      <textarea class="ms-dos-form-textarea" [(ngModel)]="formData.message" name="message" required></textarea>
+    </div>
+    <div class="ms-dos-form-group">
+      <button class="ms-dos-form-button" type="submit">Submit</button>
+    </div>
+  </form>
+</div>
